@@ -138,7 +138,7 @@
     cursor: default;
     transform-origin: calc(100% - 20xp) top;
     animation: headerNotifyGrowth ease-in 0.25;
-
+    will-change: transform, opacity;
 }
 
 .header__notify::before {
@@ -159,6 +159,7 @@
     height: 14px;
     right: 0;
     top: -14px;
+
 }
 
 @keyframes headerNotifyGrowth {
