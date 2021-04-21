@@ -252,8 +252,6 @@
 
 }
 
-
-
 .auth-form {
     width: 500px;
     background-color: var(--white-color);
@@ -284,6 +282,7 @@
     font-weight: 400;
     cursor: pointer;
 }
+
 
 .auth-form__form {}
 
@@ -357,4 +356,6 @@
 .auth-form__socials-google {
     background-color: var(--white-color);
     color: #666;    
+    margin-top: 8px;
+
 }
