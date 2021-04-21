@@ -267,6 +267,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 10px;
 }
 
 .auth-form__heading {
@@ -282,7 +283,6 @@
     font-weight: 400;
     cursor: pointer;
 }
-
 
 .auth-form__form {}
 
@@ -318,6 +318,7 @@
 }
 
 .auth-form__controls {
+    margin-top: 8px;
     display: flex;
     justify-content: flex-end;
     margin-top: 80px;
@@ -356,6 +357,4 @@
 .auth-form__socials-google {
     background-color: var(--white-color);
     color: #666;    
-    margin-top: 8px;
-
 }
