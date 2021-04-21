@@ -284,7 +284,8 @@
     cursor: pointer;
 }
 
-.auth-form__form {}
+.auth-form__form {
+}
 
 .auth-form__input {
     width: 100%;
