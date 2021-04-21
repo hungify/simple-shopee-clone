@@ -82,6 +82,7 @@ html {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    line-height: 1.6rem;
 }
 
 .btn.btn-normal:hover {
