@@ -842,3 +842,23 @@
   color: var(--text-color);
   display: block;
 }
+
+/* Category */
+
+.category {
+}
+
+.category__heading {
+}
+
+.category-list {
+}
+
+.category-item {
+}
+
+.category-item--active {
+}
+
+.category-item__link {
+}
