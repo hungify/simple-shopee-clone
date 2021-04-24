@@ -13,6 +13,7 @@
   padding-left: 0;
   margin-top: 4px;
   margin: 4px 0 0 0;
+  display: flex;
 }
 
 .header__navbar-item {
@@ -21,9 +22,92 @@
   position: relative;
 }
 
+.header__navbar-user {
+  display: flex;
+  justify-items: center;
+  position: relative;
+}
+
+.header__navbar-user-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+.header__navbar-user-name {
+  margin-left: 8px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.header__navbar-user-menu {
+  display: none;
+  position: absolute;
+  padding-left: 0;
+  z-index: 1;
+  top: calc(100% + 1px);
+  list-style-type: none;
+  right: 0;
+  width: 150px;
+  background-color: var(--white-color);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px #e0e0e0;
+  font-weight: 400;
+}
+
+.header__navbar-user-menu::before {
+  content: "";
+  right: 10px;
+  top: -10px;
+  position: absolute;
+  border-bottom: 10px solid rgb(255, 255, 255);
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+}
+
+.header__navbar-user-menu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  right: 0;
+  width: 50%;
+  height: 6px;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu {
+  display: block;
+}
+
+.header__navbar-user-item {
+}
+
+.header__navbar-user-item a {
+  text-decoration: none;
+  display: block;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  padding: 6px 16px;
+}
+
+.header__navbar-user-item a:first-child {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.header__navbar-user-item a:first-child {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.header__navbar-user-item a:hover {
+  color: rgb(0, 191, 165);
+}
+
 .header__navbar-item,
 .header__navbar-item-link {
-  display: inline-block;
+  display: flex;
   font-size: 1.4rem;
   color: var(--white-color);
   text-decoration: none;
@@ -100,6 +184,7 @@
 .header__navbar-item--has-qr:hover .header__qr,
 .header__navbar-item--has-notify:hover .header__notify {
   display: block;
+  z-index: 1;
 }
 
 .header__qr-img {
@@ -136,19 +221,19 @@
   background-color: var(--white-color);
   border: 1px solid #d3d3d3;
   cursor: default;
-  transform-origin: calc(100% - 20xp) top;
+  transform-origin: calc(100% - 20px) top;
   animation: headerNotifyGrowth ease-in 0.25;
   will-change: transform, opacity;
 }
 
 .header__notify::before {
   content: "";
-  right: 4px;
-  top: -29px;
   position: absolute;
+  right: 25px;
+  top: -10px;
   border-style: solid;
-  border-width: 20px 28px;
-  border-color: transparent transparent var(--white-color) transparent;
+  border-width: 0 14px 10px;
+  border-color: transparent transparent rgb(255, 255, 255) transparent;
 }
 
 .header__notify::after {
@@ -523,11 +608,11 @@
 .header__cart-list::after {
   position: absolute;
   content: "";
-  right: 3px;
-  top: -26px;
-  border-width: 16px 20px;
+  right: 9px;
+  top: -10px;
   border-style: solid;
-  border-color: transparent transparent var(--white-color) transparent;
+  border-width: 0 14px 10px;
+  border-color: transparent transparent rgb(255, 255, 255) transparent;
   cursor: pointer;
 }
 
@@ -539,7 +624,7 @@
   width: 400px;
   border-radius: 2px;
   box-shadow: 0 1px 3.125rem 0 rgb(0, 0, 0, 0.2);
-  /* display: none; */
+  display: none;
   animation: fadeIn ease-in 0.2s;
   cursor: default;
 }
