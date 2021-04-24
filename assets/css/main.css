@@ -36,7 +36,7 @@
 }
 
 .header__navbar-user-name {
-  margin-left: 8px;
+  margin-left: 4px;
   font-size: 1.4rem;
   font-weight: 400;
 }
@@ -108,7 +108,7 @@
 .header__navbar-item,
 .header__navbar-item-link {
   display: flex;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--white-color);
   text-decoration: none;
   font-weight: 300;
@@ -143,9 +143,17 @@
   transform: translateY(-50%);
 }
 
+.header__navbar-user-item--separate {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .header__navbar-icon-link {
   color: var(--white-color);
   text-decoration: none;
+}
+
+.header__navbar-icon-link:nth-child(2) {
+  margin-left: 3px;
 }
 
 .header__navbar-icon {
@@ -161,7 +169,7 @@
 /* Header QR Code */
 .header__qr {
   background-color: var(--white-color);
-  width: 186xp;
+  width: 186px;
   position: absolute;
   left: 0;
   top: 118%;
@@ -184,7 +192,6 @@
 .header__navbar-item--has-qr:hover .header__qr,
 .header__navbar-item--has-notify:hover .header__notify {
   display: block;
-  z-index: 1;
 }
 
 .header__qr-img {
@@ -218,10 +225,12 @@
   top: 118%;
   width: 404px;
   right: 0;
+  z-index: 1;
+  border-radius: 2px;
   background-color: var(--white-color);
-  border: 1px solid #d3d3d3;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: default;
-  transform-origin: calc(100% - 20px) top;
+  transform-origin: calc(100% - 32px) top;
   animation: headerNotifyGrowth ease-in 0.25;
   will-change: transform, opacity;
 }
@@ -473,8 +482,14 @@
   width: 200px;
 }
 
+.header__logo-link {
+  text-decoration: none;
+  color: transparent;
+}
+
 .header__logo-img {
   width: 150px;
+  fill: #fff;
 }
 
 .header__cart {
@@ -736,7 +751,7 @@
 .header__search-option {
   position: absolute;
   right: 0;
-  top: 120%;
+  top: calc(100% + 6px);
   width: 130px;
   list-style-type: none;
   box-shadow: 0 1px 2px #e0e0e0;
@@ -790,7 +805,7 @@
 
 .header__search-history {
   position: absolute;
-  top: calc(100% + 2px);
+  top: calc(100% + 6px);
   left: 0;
   width: calc(100% - 16px);
   background-color: var(--white-color);
@@ -798,6 +813,7 @@
   box-shadow: 0 0 3px rgba(172, 172, 172);
   display: none;
   overflow: hidden;
+  z-index: 2;
 }
 
 .header__search-history-heading {
