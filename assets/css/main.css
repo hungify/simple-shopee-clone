@@ -528,7 +528,7 @@
 .header__cart-list-item {
   padding-left: 0;
   list-style-type: none;
-  height: 42vh;
+  max-height: 56vh;
   opacity: auto;
 }
 
@@ -851,6 +851,62 @@
   line-height: 38px;
   color: var(--text-color);
   display: block;
+}
+
+/* Header sort bar */
+
+.header__sort-bar {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  height: var(--header-sort-bar-height);
+  background-color: var(--white-color);
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header__sort-item {
+  flex: 1;
+}
+
+.header__sort-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  display: block;
+  height: 100%;
+  line-height: var(--header-sort-bar-height);
+  text-align: center;
+}
+
+.header__sort-link:nth-child(n + 2)::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  height: 60%;
+  border: 1px solid #e5e5e5;
+  transform: translateY(-50%);
+}
+
+.header__sort-link::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  height: 60%;
+  border: 1px solid #e5e5e5;
+  transform: translateY(-50%);
+}
+
+.header__sort-link--active {
+  color: var(--primary-color);
 }
 
 /* App container */
